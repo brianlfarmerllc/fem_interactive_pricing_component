@@ -36,6 +36,9 @@
     .views {
       text-transform: uppercase;
       letter-spacing: 0.3rem;
+      .views-num {
+        font-size: 1.6rem;
+      }
     }
     .price {
       position: relative;

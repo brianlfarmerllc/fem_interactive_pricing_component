@@ -12,8 +12,6 @@ class Slider {
     this.rangeElement.setAttribute("min", options.min);
     this.rangeElement.setAttribute("max", options.max);
     this.rangeElement.value = options.cur;
-
-    this.updateSlider();
   }
 
   generateBackground(rangeElement) {
@@ -21,8 +19,7 @@ class Slider {
       return;
     }
 
-    let percentage =
-      ((this.rangeElement.value - this.options.min) / (this.options.max - this.options.min)) * 100;
+    let percentage = ((this.rangeElement.value - this.options.min) / (this.options.max - this.options.min)) * 100;
     return (
       "background: linear-gradient(to right, #a5f3eb, #a5f3eb " +
       percentage +
