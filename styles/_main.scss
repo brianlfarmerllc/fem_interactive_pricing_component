@@ -1,0 +1,104 @@
+//interactive card and components
+.header-text {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  background-image: url("../assets/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card {
+  width: 600px;
+  height: 400px;
+  background-color: $white;
+  position: absolute;
+  top: 275px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: rgba(185, 198, 235, 0.5) 0px 12px 36px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 4rem;
+  .card-top {
+    flex: 1;
+    @include flex(row, space-between, center);
+    .views {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+    }
+    .price {
+      position: relative;
+      .price-num {
+        position: absolute;
+        left: -140px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 4rem;
+        color: $darkDesaturatedBlue;
+        @include manrope(800);
+      }
+    }
+  }
+  .card-middle {
+    flex: 1;
+    .range_slider [type="range"] {
+      width: 100%;
+      -webkit-appearance: none;
+      background: #f1f1f1;
+      height: 12px;
+      border-radius: 5px;
+      outline: none;
+      padding: 0;
+      margin: 0;
+    }
+    // custom thumb properties chrome
+    .range_slider [type="range"]::-webkit-slider-thumb {
+      cursor: pointer;
+      -webkit-appearance: none;
+      width: 50px;
+      height: 50px;
+      background: $strongCyan;
+      background-image: url("../assets/images/icon-slider.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: $strongCyan 0px 10px 30px -3px;
+    }
+
+    // custom thumb properties firefox
+    .range_slider [type="range"]::-moz-range-thumb {
+      cursor: pointer;
+      -webkit-appearance: none;
+      width: 50px;
+      height: 50px;
+      background: $strongCyan;
+      border-radius: 50%;
+      box-shadow: $strongCyan 0px 10px 30px -3px;
+    }
+  }
+  .card-bottom {
+    flex: 1;
+  }
+}
+
+//attribution for frontend mentor
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
