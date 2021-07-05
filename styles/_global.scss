@@ -42,4 +42,21 @@ li,
 span {
   font-size: 1.5rem;
   line-height: 1rem;
+  color: $grayishBlue;
+  letter-spacing: 0.1rem;
+}
+
+ul {
+  list-style: none;
+  @include flex(column, center, flex-start);
+  height: 100%;
+}
+
+li {
+  @include flex(row, flex-start, center);
+  padding: 1rem 0rem;
+}
+
+a {
+  text-decoration: none;
 }
