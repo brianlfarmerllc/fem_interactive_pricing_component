@@ -46,3 +46,7 @@
 .range_slider [type="range"]::-moz-range-thumb:active {
   cursor: grabbing;
 }
+
+.range_slider_top {
+  display: none;
+}

@@ -22,7 +22,7 @@ class Slider {
     );
   }
 
-  //looks at value and generates price
+  //looks at value of slide and if toggle is checked and generates price
   generatePrice() {
     let value = parseInt(this.rangeElement.value);
     let isToggled = this.toggleElement.checked;
@@ -39,6 +39,7 @@ class Slider {
       return !isToggled ? "$32.00" : "$24.00";
     }
   }
+  //looks at value and generates views
   generateViews() {
     let value = parseInt(this.rangeElement.value);
 
@@ -63,7 +64,9 @@ class Slider {
   }
 }
 
-let rangeElement = document.querySelector('.range_slider [type="range"]');
+//Dom Selectors
+let rangeElement = document.querySelector('.range_slider_middle [type="range"]');
+let rangeElement2 = document.querySelector('.range_slider_top [type="range"]');
 let pageViews = document.querySelector(".views .views-num");
 let cost = document.querySelector(".price .price-num");
 let toggleElement = document.getElementById("toggle");
@@ -74,11 +77,17 @@ let options = {
 };
 
 let slider = new Slider(rangeElement, options, pageViews, cost, toggleElement);
+let slider2 = new Slider(rangeElement2, options, pageViews, cost, toggleElement);
 
 slider.updateSlider();
+slider2.updateSlider();
 
+//Event listeners
 slider.rangeElement.addEventListener("input", function () {
   slider.updateSlider();
+});
+slider2.rangeElement.addEventListener("input", function () {
+  slider2.updateSlider();
 });
 slider.toggleElement.addEventListener("click", function () {
   slider.updateSlider();
