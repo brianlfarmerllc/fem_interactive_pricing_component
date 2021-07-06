@@ -1,9 +1,10 @@
 class Slider {
-  constructor(rangeElement, options, pageViews, cost) {
+  constructor(rangeElement, options, pageViews, cost, toggleElement) {
     this.rangeElement = rangeElement;
     this.pageViews = pageViews;
     this.cost = cost;
     this.options = options;
+    this.toggleElement = toggleElement;
   }
   // method to generate the background of slider based on current value
   generateBackground() {
@@ -24,17 +25,18 @@ class Slider {
   //looks at value and generates price
   generatePrice() {
     let value = parseInt(this.rangeElement.value);
+    let isToggled = this.toggleElement.checked;
 
     if (value < 100) {
-      return "$8.00";
+      return !isToggled ? "$8.00" : "$6.00";
     } else if (value > 100 && value < 200) {
-      return "$12.00";
+      return !isToggled ? "$12.00" : "$9.00";
     } else if (value > 200 && value < 300) {
-      return "$16.00";
+      return !isToggled ? "$16.00" : "$12.00";
     } else if (value > 300 && value < 400) {
-      return "$24.00";
+      return !isToggled ? "$24.00" : "$18.00";
     } else if (value > 400 && value <= 500) {
-      return "$32.00";
+      return !isToggled ? "$32.00" : "$24.00";
     }
   }
   generateViews() {
@@ -64,16 +66,20 @@ class Slider {
 let rangeElement = document.querySelector('.range_slider [type="range"]');
 let pageViews = document.querySelector(".views .views-num");
 let cost = document.querySelector(".price .price-num");
+let toggleElement = document.getElementById("toggle");
 
 let options = {
   min: 0,
   max: 500,
 };
 
-let slider = new Slider(rangeElement, options, pageViews, cost);
+let slider = new Slider(rangeElement, options, pageViews, cost, toggleElement);
 
 slider.updateSlider();
 
 slider.rangeElement.addEventListener("input", function () {
+  slider.updateSlider();
+});
+slider.toggleElement.addEventListener("click", function () {
   slider.updateSlider();
 });
