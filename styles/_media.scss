@@ -1,0 +1,83 @@
+@media screen and (max-width: 675px) {
+  .card {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+  .header-text {
+    top: 40px;
+    h2 {
+      font-size: 2.4rem;
+    }
+    h4 {
+      width: 60%;
+    }
+  }
+  .card {
+    // min-height: 500px;
+    .card-top {
+      flex-direction: column;
+      justify-content: space-around;
+      .views {
+        padding: 2rem 0rem;
+      }
+      .range_slider_top {
+        width: 100%;
+        display: block;
+        padding: 2rem 0rem;
+      }
+      .price {
+        padding: 2rem 0rem;
+        position: unset;
+        .price-num {
+          position: unset;
+        }
+      }
+    }
+
+    .card-middle {
+      .range_slider_middle {
+        display: none;
+      }
+      .toggle-container {
+        padding: 2rem 0rem;
+      }
+
+      .switch {
+        &::after {
+          right: -82px;
+        }
+        &::before {
+          left: -97px;
+        }
+      }
+      .discount {
+        &::after {
+          content: "-25%";
+          right: 20px;
+          bottom: 44px;
+          padding: 0.3rem 0.75rem;
+          border-radius: 25px;
+        }
+      }
+    }
+    .card-bottom {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      ul {
+        flex-direction: column;
+        justify-content: space-center;
+        align-items: center;
+        padding-top: 2rem;
+      }
+      .cta {
+        padding: 2rem 0rem;
+      }
+    }
+  }
+}

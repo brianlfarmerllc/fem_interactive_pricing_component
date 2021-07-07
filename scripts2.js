@@ -75,8 +75,9 @@ let options = {
   min: 0,
   max: 500,
 };
-
+// main slider
 let slider = new Slider(rangeElement, options, pageViews, cost, toggleElement);
+// mobile slider
 let slider2 = new Slider(rangeElement2, options, pageViews, cost, toggleElement);
 
 slider.updateSlider();

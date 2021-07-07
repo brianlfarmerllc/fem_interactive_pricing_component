@@ -1,5 +1,6 @@
 //interactive card and components
 .header-text {
+  width: 100%;
   position: absolute;
   top: 50px;
   left: 50%;
@@ -61,13 +62,16 @@
     @import "./inputToggle";
 
     .discount {
-      position: absolute;
-      right: 38px;
-      bottom: 38px;
-      color: $lightRed;
-      background: $lightGrayishRed;
-      padding: 0.75rem 1.15rem;
-      border-radius: 25px;
+      &::after {
+        content: "25% discount";
+        position: absolute;
+        right: 38px;
+        bottom: 38px;
+        color: $lightRed;
+        background: $lightGrayishRed;
+        padding: 0.75rem 1.15rem;
+        border-radius: 25px;
+      }
     }
   }
   .card-bottom {
@@ -98,6 +102,7 @@
 
 //attribution for frontend mentor
 .attribution {
+  width: 100%;
   position: absolute;
   bottom: 10px;
   left: 50%;

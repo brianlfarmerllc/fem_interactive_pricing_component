@@ -10,13 +10,12 @@ html {
 }
 
 body {
-  height: 100vh;
   background: #fafbff;
 }
 
 main {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1440px;
   margin: auto;
   background-image: url("../assets/images/bg-pattern.svg");
@@ -88,6 +87,7 @@ a {
 }
 
 .header-text {
+  width: 100%;
   position: absolute;
   top: 50px;
   left: 50%;
@@ -396,7 +396,8 @@ a {
   border-radius: 50%;
 }
 
-.card .card-middle .discount {
+.card .card-middle .discount::after {
+  content: "25% discount";
   position: absolute;
   right: 38px;
   bottom: 38px;
@@ -443,6 +444,7 @@ a {
 }
 
 .attribution {
+  width: 100%;
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -454,5 +456,95 @@ a {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (max-width: 675px) {
+  .card {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+  .header-text {
+    top: 40px;
+  }
+  .header-text h2 {
+    font-size: 2.4rem;
+  }
+  .header-text h4 {
+    width: 60%;
+  }
+  .card .card-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .card .card-top .views {
+    padding: 2rem 0rem;
+  }
+  .card .card-top .range_slider_top {
+    width: 100%;
+    display: block;
+    padding: 2rem 0rem;
+  }
+  .card .card-top .price {
+    padding: 2rem 0rem;
+    position: unset;
+  }
+  .card .card-top .price .price-num {
+    position: unset;
+  }
+  .card .card-middle .range_slider_middle {
+    display: none;
+  }
+  .card .card-middle .toggle-container {
+    padding: 2rem 0rem;
+  }
+  .card .card-middle .switch::after {
+    right: -82px;
+  }
+  .card .card-middle .switch::before {
+    left: -97px;
+  }
+  .card .card-middle .discount::after {
+    content: "-25%";
+    right: 20px;
+    bottom: 44px;
+    padding: 0.3rem 0.75rem;
+    border-radius: 25px;
+  }
+  .card .card-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card .card-bottom ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-center;
+        -ms-flex-pack: space-center;
+            justify-content: space-center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 2rem;
+  }
+  .card .card-bottom .cta {
+    padding: 2rem 0rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
