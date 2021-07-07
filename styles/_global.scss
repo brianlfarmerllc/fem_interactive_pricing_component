@@ -19,15 +19,7 @@ main {
   margin: auto;
   background-image: url("../assets/images/bg-pattern.svg");
   background-repeat: no-repeat;
-}
-
-section {
-  // position: relative;
-  // min-height: 100vh;
-  // max-width: 1440px;
-  // margin: auto;
-  // background-image: url("../assets/images/bg-pattern.svg");
-  // background-repeat: no-repeat;
+  @include flex(column, flex-start, center);
 }
 
 h2 {
