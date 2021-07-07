@@ -47,9 +47,9 @@ The user should be able to:
 
 ### What I learned
 
-I wanted to do this chalange to learn how to make a custom range slider and a toggle switch which was much harder than I anticapated. This also seemed like a good project to continue practicing Object Oriented Programing with ES6 classes. I was able to create a slider class and attach methods to it to create the slider functionality and color styling. I had not originially intended to create two slider objects instances but having the abiity to create one for mobile and one for desktop was easier than doing a bunch of repositioning with CSS.
+I wanted to do this challenge to learn how to make a custom range slider and a toggle switch which was much harder than I anticipated. This also seemed like a good project to continue practicing Object Oriented Programing with ES6 classes. I was able to create a slider class and attach methods to it to create the slider functionality and color styling. I had not originally intended to create two slider objects instances but having the ability to create one for mobile and one for desktop was easier than doing a bunch of repositioning with CSS.
 
-I also made use of before and after pseudo element text to position parent elements just the way I wanted or to swap text. One example was with the discount banner next to the toggle. With the empty span element I was able to swap out the ::after content text with @media instead of using javascript
+I also made use of before and after pseudo element text to position parent elements just the way I wanted or to swap text. One example was with the discount banner next to the toggle. With the empty span element I was able to swap out the ::after content text with @media instead of using JavaScript
 
 ```html
 <span class="discount"></span>
@@ -84,12 +84,12 @@ normal desktop view
 
 ### Continued development
 
-I really like this component and it has a lot of usful features that I could use in other projects. One thing I would like to come back and figure out is how to attach the event listener in the class object. I know it can be done but I was having trouble implementing it.
+I really like this component and it has a lot of useful features that I could use in other projects. One thing I would like to come back and figure out is how to attach the event listener in the class object. I know it can be done but I was having trouble implementing it.
 
 ### Useful resources
 
 - [CSS-Tricks on range slider](https://css-tricks.com/sliding-nightmare-understanding-range-input/) - I was at a loss with the range slider until I read this article. There is a lot too it and it took me a could sittings to finish.
-- [W3 Custom Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) - I used this as a baseline for my toggle but in order to ensure the javascript click event was triggering I actually had to make the width and height 100% on the hidden checkbox.
+- [W3 Custom Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp) - I used this as a baseline for my toggle but in order to ensure the JavaScript click event was triggering I actually had to make the width and height 100% on the hidden checkbox.
 
 ## Author
 
